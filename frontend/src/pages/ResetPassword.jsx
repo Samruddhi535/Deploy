@@ -24,7 +24,7 @@ const ResetPassword = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:4000/reset-password`,
+        `https://deploy-erwo.onrender.com/reset-password`,
         { token, newPassword }
       );
 
@@ -40,60 +40,7 @@ const ResetPassword = () => {
   };
 
   return (
-    // <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-    //   <form
-    //     onSubmit={handleSubmit}
-    //     className="bg-gray-800 p-6 rounded-md shadow-md w-full max-w-sm"
-    //   >
-    //     <h1 className="text-3xl font-bold mb-6">Reset Password</h1>
-
-    //     {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-    //     {successMessage && <p className="text-green-500">{successMessage}</p>}
-
-    //     <div className="mb-4">
-    //       <label
-    //         htmlFor="newPassword"
-    //         className="block text-sm font-medium text-gray-300 mb-2"
-    //       >
-    //         New Password
-    //       </label>
-    //       <input
-    //         type="password"
-    //         id="newPassword"
-    //         value={newPassword}
-    //         onChange={(e) => setNewPassword(e.target.value)}
-    //         placeholder="Enter new password"
-    //         className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-    //         required
-    //       />
-    //     </div>
-
-    //     <div className="mb-6">
-    //       <label
-    //         htmlFor="confirmPassword"
-    //         className="block text-sm font-medium text-gray-300 mb-2"
-    //       >
-    //         Confirm Password
-    //       </label>
-    //       <input
-    //         type="password"
-    //         id="confirmPassword"
-    //         value={confirmPassword}
-    //         onChange={(e) => setConfirmPassword(e.target.value)}
-    //         placeholder="Confirm new password"
-    //         className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-    //         required
-    //       />
-    //     </div>
-
-    //     <button
-    //       type="submit"
-    //       className="w-full bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-600 transition"
-    //     >
-    //       Reset Password
-    //     </button>
-    //   </form>
-    // </div>
+   
 
     <div className="flex items-center justify-center min-h-screen bg-black">
       <form

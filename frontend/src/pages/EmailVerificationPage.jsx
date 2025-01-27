@@ -29,7 +29,7 @@ const EmailVerificationPage = () => {
       setVerificationMessage("Verifying your email...");
       // API call to verify the email
       const verificationResponse = await axios.get(
-        `http://localhost:4000/verify-email?token=${token}`
+        `https://deploy-erwo.onrender.com/verify-email?token=${token}`
       );
       //   console.log(verificationResponse.data);
       if (verificationResponse.data.success) {
