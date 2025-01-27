@@ -39,9 +39,7 @@ export const signup = async (req, res, next) => {
     );
 
     // Construct the verification link
-    const verificationLink = `${
-      process.env.BASE_URL
-    }/verify-email?token=${encodeURIComponent(verificationToken)}`;
+    const verificationLink = `https://deploy-mu-coral.vercel.app//verify-email?token=${encodeURIComponent(verificationToken)}`;
 
     const signupEmailBody = `
       <html>
@@ -211,7 +209,7 @@ export const forgotPassword = async (req, res, next) => {
     });
 
     // Construct reset link
-    const resetLink = `${process.env.BASE_URL}/reset-password?token=${resetToken}`;
+    const resetLink = `https://deploy-mu-coral.vercel.app/reset-password?token=${resetToken}`;
 
     const passwordResetEmailBody = `
       <html>
