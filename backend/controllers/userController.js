@@ -91,15 +91,16 @@ export const signup = async (req, res, next) => {
         <body>
           <div class="container">
             <h1>Welcome to Our Platform!</h1>
-            <p>Hi ${firstName},</p>
-            <p>Thank you for signing up. To complete your registration, please verify your email by clicking the link below:</p>
+            <p>Hello ${firstName},</p>
+            <p>We’re excited to have you on board. To finalize your registration, kindly verify your email by clicking the button below:</p>
             <a href="${verificationLink}" class="cta-button">Verify Email</a>
-            <p>If you didn't sign up, please ignore this email.</p>
-            <p>Best regards,<br/>To-Let Globe</p>
+            <p>If you didn’t create an account with us, please disregard this message.</p>
+            <p>Warm regards,<br/>To-Let Globe</p>
           </div>
         </body>
       </html>
     `;
+
 
     // Send the verification email
     await sendEmail(email, "Verify Your Email", signupEmailBody);
@@ -261,15 +262,16 @@ export const forgotPassword = async (req, res, next) => {
         <body>
           <div class="container">
             <h1>Password Reset Request</h1>
-            <p>Hi ${user.firstName},</p>
-            <p>We received a request to reset your password. If you made this request, click the button below to reset your password:</p>
+            <p>Hello ${user.firstName},</p>
+            <p>We have received a request to reset your password. If this was initiated by you, please click the button below to proceed with the reset:</p>
             <a href="${resetLink}" class="cta-button">Reset Password</a>
-            <p>If you didn't request a password reset, please ignore this email.</p>
-            <p>Best regards,<br/>To-Let Globe</p>
+            <p>If you didn’t request a password reset, kindly disregard this message.</p>
+            <p>Warm regards,<br/>To-Let Globe</p>
           </div>
         </body>
       </html>
     `;
+
 
     // Send reset password email
     await sendEmail(email, "Password Reset", passwordResetEmailBody);
